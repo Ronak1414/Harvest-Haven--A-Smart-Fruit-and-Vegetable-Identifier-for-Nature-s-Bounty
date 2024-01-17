@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit and Vegetable Classifier</title>
+    <!-- Inside your HTML template -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body >
+    <div id="box">
+    <h1>Harvest Haven: A Smart Fruit and Vegetable Identifier for Nature's Bounty</h1>
+    <form method="post" enctype="multipart/form-data" action="/">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

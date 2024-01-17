@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    
+}
+
+h1 {
+    color: #f6eded;
+    text-align: center;
+    
+}
+div{
+padding-bottom: 25%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+    color: #f6eded;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: -1px 0px 6px 9px rgba(186, 239, 140, 0.492);
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Scale the input on hover */
+}
+
+input:focus {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    animation: none; /* Disable animation by default */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    animation: submitAnimation 0.5s ease-out; /* Run the animation on button click */
+}
+
+@keyframes submitAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

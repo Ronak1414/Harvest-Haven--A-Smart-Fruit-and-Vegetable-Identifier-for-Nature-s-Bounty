@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body onload="readAloudAndFetchInfo()">
+    <h1>Result</h1>
+    <div>
+     <p> The Predicted Label is :</p>   
+    <p id="predictedLabel">{{ predicted_label }}</p>
+    <button onclick="readAloudAndFetchInfo()">Click here to listen again</button>
+    </div>
+    <script>
+        function readAloudAndFetchInfo() {
+            // Get the predicted label
+            const predictedLabel = document.getElementById('predictedLabel').textContent;
+            const pred= predictedLabel
+            // Text-to-speech using the Web Speech API
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(`The predicted label is ${pred} , you can get more information about ${pred} from google by just typing the name `);
+            synth.speak(utterance);
+
+        }
+    </script>
+</body>
+</html>
